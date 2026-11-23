@@ -1,0 +1,10 @@
+{
+  "queries": ["tema principal do episódio", "outra forma de buscar o mesmo tema"],
+  "lookbackDays": 365,
+  "maxResultsPerQuery": 10,
+  "youtube": { "enabled": true, "regionCode": "BR", "relevanceLanguage": "pt", "order": "relevance" },
+  "crossref": { "enabled": true, "contactEmail": null },
+  "feeds": [
+    { "label": "Exemplo de feed (troque)", "url": "https://exemplo.com/feed.xml" }
+  ]
+}

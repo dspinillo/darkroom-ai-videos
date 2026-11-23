@@ -1,0 +1,312 @@
+{
+  "id": "demo-documentario",
+  "title": "Imagens calculadas",
+  "channelName": "Seu Canal",
+  "format": "landscape",
+  "theme": "documentary",
+  "engine": "stills",
+  "captions": "sidecar",
+  "voice": {
+    "provider": "say",
+    "sayVoice": "Luciana",
+    "gapSeconds": 0.6
+  },
+  "blocks": [
+    {
+      "id": "d1",
+      "text": "Algumas das imagens mais estranhas da ciência não foram fotografadas. Foram calculadas, a partir de uma regra curta."
+    },
+    {
+      "id": "d2",
+      "text": "Em mil novecentos e setenta, Martin Gardner apresentou na Scientific American o Jogo da Vida, de John Conway. Quatro regras, uma grade, e padrões que parecem vivos."
+    },
+    {
+      "id": "d3",
+      "text": "Em mil novecentos e setenta e cinco, Benoit Mandelbrot cunhou a palavra fractal. Trabalhando na IBM, ele estudou por computador o conjunto que hoje leva seu nome."
+    },
+    {
+      "id": "d4",
+      "text": "Em mil novecentos e oitenta e cinco, Stephen Wolfram suspeitou que uma regra de uma linha só, a regra cento e dez, fosse capaz de qualquer cálculo."
+    },
+    {
+      "id": "d5",
+      "text": "Matthew Cook provou. A demonstração foi publicada em dois mil e quatro."
+    },
+    {
+      "id": "d6",
+      "text": "Todas as imagens deste vídeo foram geradas com essas regras, no FFmpeg. Nenhuma é arquivo."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "abertura",
+      "type": "photo",
+      "at": 0,
+      "asset": "mandelbrot",
+      "hero": true,
+      "eyebrow": "Uma história real",
+      "title": "Imagens calculadas",
+      "subtitle": "Nenhuma delas foi fotografada."
+    },
+    {
+      "id": "linha-1970",
+      "type": "chronology",
+      "at": {
+        "block": "d2"
+      },
+      "title": "Três regras, três décadas",
+      "timeline": [
+        [
+          "1970",
+          "Jogo da Vida"
+        ],
+        [
+          "1975",
+          "a palavra fractal"
+        ],
+        [
+          "2004",
+          "a prova da regra 110"
+        ]
+      ],
+      "stage": 0,
+      "claim": "prova-2004"
+    },
+    {
+      "id": "vida",
+      "type": "archive",
+      "at": {
+        "block": "d2",
+        "phrase": "Quatro regras"
+      },
+      "asset": "vida",
+      "title": "Jogo da Vida",
+      "subtitle": "John Conway. Uma célula nasce com três vizinhas e sobrevive com duas ou três.",
+      "sourceNote": "Martin Gardner, Scientific American, outubro de 1970",
+      "claim": "vida-1970"
+    },
+    {
+      "id": "linha-1975",
+      "type": "chronology",
+      "at": {
+        "block": "d3"
+      },
+      "title": "Três regras, três décadas",
+      "timeline": [
+        [
+          "1970",
+          "Jogo da Vida"
+        ],
+        [
+          "1975",
+          "a palavra fractal"
+        ],
+        [
+          "2004",
+          "a prova da regra 110"
+        ]
+      ],
+      "stage": 1,
+      "claim": "prova-2004"
+    },
+    {
+      "id": "conjunto",
+      "type": "photo",
+      "at": {
+        "block": "d3",
+        "phrase": "Trabalhando na IBM,"
+      },
+      "asset": "mandelbrot-detalhe",
+      "eyebrow": "Detalhe do conjunto",
+      "title": "O conjunto de Mandelbrot",
+      "subtitle": "Estudado por computador na IBM.",
+      "motion": "pull",
+      "claim": "mandelbrot-ibm"
+    },
+    {
+      "id": "suspeita",
+      "type": "report",
+      "at": {
+        "block": "d4"
+      },
+      "title": "A suspeita",
+      "subtitle": "Uma regra de uma linha, aplicada linha após linha.",
+      "reportTitle": "Regra 110",
+      "reportAuthor": "Resumo editorial",
+      "items": [
+        [
+          "quem",
+          "Stephen Wolfram"
+        ],
+        [
+          "quando",
+          "1985"
+        ],
+        [
+          "conjectura",
+          "capaz de qualquer cálculo"
+        ]
+      ],
+      "claim": "conjectura-1985"
+    },
+    {
+      "id": "regra-110",
+      "type": "archive",
+      "at": {
+        "block": "d4",
+        "phrase": "a regra cento e dez,"
+      },
+      "asset": "regra-110",
+      "title": "Regra 110",
+      "subtitle": "Cada linha é a geração seguinte da linha de cima."
+    },
+    {
+      "id": "linha-2004",
+      "type": "chronology",
+      "at": {
+        "block": "d5"
+      },
+      "title": "Três regras, três décadas",
+      "timeline": [
+        [
+          "1970",
+          "Jogo da Vida"
+        ],
+        [
+          "1975",
+          "a palavra fractal"
+        ],
+        [
+          "2004",
+          "a prova da regra 110"
+        ]
+      ],
+      "stage": 2,
+      "claim": "prova-2004"
+    },
+    {
+      "id": "como-foi-feito",
+      "type": "cards",
+      "at": {
+        "block": "d6"
+      },
+      "title": "Como este vídeo foi feito",
+      "items": [
+        [
+          "Imagens",
+          "FFmpeg, fontes lavfi"
+        ],
+        [
+          "Motor",
+          "stills e zoompan"
+        ],
+        [
+          "Voz",
+          "say do macOS"
+        ]
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "mandelbrot",
+      "file": "assets/mandelbrot.png",
+      "kind": "image",
+      "credit": "Conjunto de Mandelbrot · gerado com FFmpeg",
+      "license": "domínio público",
+      "generated": true
+    },
+    {
+      "id": "mandelbrot-detalhe",
+      "file": "assets/mandelbrot-detalhe.png",
+      "kind": "image",
+      "credit": "Detalhe do conjunto de Mandelbrot · gerado com FFmpeg",
+      "license": "domínio público",
+      "generated": true
+    },
+    {
+      "id": "vida",
+      "file": "assets/jogo-da-vida.png",
+      "kind": "image",
+      "credit": "Jogo da Vida · gerado com FFmpeg",
+      "license": "domínio público",
+      "generated": true
+    },
+    {
+      "id": "regra-110",
+      "file": "assets/regra-110.png",
+      "kind": "image",
+      "credit": "Autômato celular regra 110 · gerado com FFmpeg",
+      "license": "domínio público",
+      "generated": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "wiki-vida",
+      "title": "Conway's Game of Life — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": "wiki-fractal",
+      "title": "Fractal — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fractal",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": "wiki-mandelbrot",
+      "title": "Mandelbrot set — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mandelbrot_set",
+      "accessed": "2026-11-23"
+    },
+    {
+      "id": "cook-2004",
+      "title": "Matthew Cook, Universality in Elementary Cellular Automata, Complex Systems 15(1), 2004",
+      "url": "https://www.complex-systems.com/abstracts/v15_i01_a01/",
+      "accessed": "2026-11-23"
+    }
+  ],
+  "claims": [
+    {
+      "id": "vida-1970",
+      "text": "O Jogo da Vida, de John Conway, apareceu na coluna de Martin Gardner na Scientific American em outubro de 1970; nasce com três vizinhas, sobrevive com duas ou três.",
+      "sources": [
+        "wiki-vida"
+      ],
+      "status": "verificada"
+    },
+    {
+      "id": "fractal-1975",
+      "text": "Benoit Mandelbrot cunhou a palavra fractal em 1975.",
+      "sources": [
+        "wiki-fractal"
+      ],
+      "status": "verificada"
+    },
+    {
+      "id": "mandelbrot-ibm",
+      "text": "Mandelbrot visualizou o conjunto por computador no centro de pesquisa da IBM (1980).",
+      "sources": [
+        "wiki-mandelbrot"
+      ],
+      "status": "verificada"
+    },
+    {
+      "id": "conjectura-1985",
+      "text": "Stephen Wolfram conjecturou em 1985 que a regra 110 é capaz de computação universal.",
+      "sources": [
+        "cook-2004"
+      ],
+      "status": "verificada"
+    },
+    {
+      "id": "prova-2004",
+      "text": "Matthew Cook publicou a prova de universalidade da regra 110 em 2004, na Complex Systems.",
+      "sources": [
+        "cook-2004"
+      ],
+      "status": "verificada"
+    }
+  ]
+}

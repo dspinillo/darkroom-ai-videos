@@ -1,0 +1,170 @@
+{
+  "id": "demo-editorial",
+  "title": "Teste verde não vê a tela",
+  "channelName": "Seu Canal",
+  "format": "landscape",
+  "theme": "editorial",
+  "engine": "live",
+  "voice": {
+    "provider": "say",
+    "sayVoice": "Luciana",
+    "gapSeconds": 0.45
+  },
+  "blocks": [
+    {
+      "id": "b1",
+      "text": "Teste verde não vê a tela. Num canal real, cento e cinquenta e oito testes passavam, e todo corte tinha um frame quase preto."
+    },
+    {
+      "id": "b2",
+      "text": "Ninguém percebeu por semanas. A amostragem de qualidade caía sempre no meio dos planos, nunca na fronteira entre dois."
+    },
+    {
+      "id": "b3",
+      "text": "Quem achou foi alguém olhando o frame certo. Hoje um scanner faz essa ronda: compara cada quadro com os vizinhos. Um corte de verdade persiste. Uma piscada volta."
+    },
+    {
+      "id": "b4",
+      "text": "O mesmo vale para o b-roll. De nove clipes escolhidos pelo nome da busca, só três serviram."
+    },
+    {
+      "id": "b5",
+      "text": "Por isso este framework trava o que já deu errado, e deixa para você o que nenhum teste mede: assistir."
+    },
+    {
+      "id": "b6",
+      "text": "O código está aberto. Rode o demo e adapte para o seu canal."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "abertura",
+      "type": "hook",
+      "at": 0,
+      "kicker": "lição 01",
+      "title": "Teste verde não vê a tela"
+    },
+    {
+      "id": "testes",
+      "type": "stat",
+      "at": {
+        "block": "b1",
+        "phrase": "cento e cinquenta"
+      },
+      "value": 158,
+      "label": "testes passando",
+      "source": "canal A, episódio piloto"
+    },
+    {
+      "id": "frame-preto",
+      "type": "effect",
+      "at": {
+        "block": "b1",
+        "phrase": "e todo corte"
+      },
+      "effect": "highlight",
+      "text": "Um frame quase preto em todo corte."
+    },
+    {
+      "id": "amostragem",
+      "type": "broll",
+      "at": {
+        "block": "b2"
+      },
+      "asset": "gradiente"
+    },
+    {
+      "id": "quem-achou",
+      "type": "statement",
+      "at": {
+        "block": "b3"
+      },
+      "title": "Alguém olhou o frame certo.",
+      "subtitle": "Hoje um scanner faz a ronda."
+    },
+    {
+      "id": "scanner",
+      "type": "code",
+      "at": {
+        "block": "b3",
+        "phrase": "compara cada quadro"
+      },
+      "title": "scanner de piscadas",
+      "lines": [
+        "dif(anterior, atual)  >= 8   // mudou",
+        "dif(anterior, depois) <  3   // e voltou",
+        "",
+        "=> piscada no frame atual"
+      ]
+    },
+    {
+      "id": "persiste",
+      "type": "statement",
+      "at": {
+        "block": "b3",
+        "phrase": "Um corte de verdade"
+      },
+      "title": "Um corte persiste. Uma piscada volta."
+    },
+    {
+      "id": "broll-busca",
+      "type": "comparison",
+      "at": {
+        "block": "b4"
+      },
+      "title": "B-roll escolhido pelo nome da busca",
+      "left": [
+        "candidatos",
+        "9"
+      ],
+      "right": [
+        "serviram",
+        "3"
+      ]
+    },
+    {
+      "id": "textura",
+      "type": "broll",
+      "at": {
+        "block": "b4",
+        "phrase": "só três serviram."
+      },
+      "asset": "vida"
+    },
+    {
+      "id": "regra",
+      "type": "takeaway",
+      "at": {
+        "block": "b5"
+      },
+      "label": "regra",
+      "headline": "Nenhuma fatia de vídeo fecha sem alguém olhar os frames."
+    },
+    {
+      "id": "fim",
+      "type": "cta",
+      "at": {
+        "block": "b6"
+      },
+      "text": "rode o demo"
+    }
+  ],
+  "assets": [
+    {
+      "id": "gradiente",
+      "file": "assets/gradiente.mp4",
+      "kind": "video",
+      "credit": "Gerado com FFmpeg (gradients)",
+      "license": "domínio público",
+      "generated": true
+    },
+    {
+      "id": "vida",
+      "file": "assets/vida.mp4",
+      "kind": "video",
+      "credit": "Gerado com FFmpeg (Jogo da Vida)",
+      "license": "domínio público",
+      "generated": true
+    }
+  ]
+}

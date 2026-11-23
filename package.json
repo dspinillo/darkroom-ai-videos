@@ -1,0 +1,49 @@
+{
+  "name": "darkroom-ai-videos",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Framework para produzir vídeos de canal dark com Remotion e FFmpeg: roteiro em blocos, voz com alinhamento, plano de cenas, render em dois motores e QA de frames.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=24 <27"
+  },
+  "bin": {
+    "darkroom": "src/cli/main.ts"
+  },
+  "scripts": {
+    "darkroom": "node src/cli/main.ts",
+    "doctor": "node src/cli/main.ts doctor",
+    "demo": "node src/cli/main.ts demo",
+    "studio": "remotion studio src/compositions/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.ts",
+    "check": "npm run typecheck && npm test",
+    "gallery": "vite --config gallery/vite.config.ts",
+    "gallery:build": "vite build --config gallery/vite.config.ts"
+  },
+  "dependencies": {
+    "@fontsource/barlow-condensed": "5.3.0",
+    "@fontsource/dm-sans": "5.3.0",
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@fontsource/ibm-plex-sans": "5.3.0",
+    "@fontsource/space-grotesk": "5.3.0",
+    "@remotion/bundler": "4.0.528",
+    "@remotion/cli": "4.0.528",
+    "@remotion/player": "4.0.528",
+    "@remotion/renderer": "4.0.528",
+    "lucide-react": "1.47.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "remotion": "4.0.528",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.6",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.1.1",
+    "typescript": "5.9.3",
+    "vite": "7.2.4"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "demo-short",
+  "title": "A legenda que sumia",
+  "channelName": "Seu Canal",
+  "format": "portrait",
+  "theme": "editorial",
+  "engine": "live",
+  "voice": { "provider": "say", "sayVoice": "Luciana", "gapSeconds": 0.4 },
+  "blocks": [
+    { "id": "b1", "text": "No Short, a legenda sumia." },
+    { "id": "b2", "text": "Ela ficava na faixa de baixo, exatamente onde o YouTube desenha título, canal e botões." },
+    { "id": "b3", "text": "A correção foi medida: trezentos e vinte pixels reservados no rodapé, e a legenda acima deles." }
+  ],
+  "scenes": [
+    { "id": "abertura", "type": "hook", "at": 0, "asset": "fundo", "kicker": "9:16", "title": "No Short, a legenda sumia." },
+    { "id": "zona", "type": "statement", "at": { "block": "b2" }, "title": "A interface do YouTube cobre o rodapé.", "subtitle": "Título, canal e botões ficam por cima." },
+    { "id": "medida", "type": "stat", "at": { "block": "b3" }, "value": 320, "unit": "px", "label": "reservados no rodapé", "source": "medido num Short real" },
+    { "id": "fim", "type": "cta", "at": { "block": "b3", "phrase": "e a legenda" }, "text": "legenda acima da zona" }
+  ],
+  "assets": [
+    { "id": "fundo", "file": "assets/gradiente-vertical.mp4", "kind": "video", "credit": "Gerado com FFmpeg (gradients)", "license": "domínio público", "generated": true }
+  ]
+}
